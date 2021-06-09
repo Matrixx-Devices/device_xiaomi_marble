@@ -66,6 +66,11 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
+    #Disable UFS auto_hibern8
+    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 0
+    #Disable UFS clock gating
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 0
+
     # Create audio-app cpuset
     mkdir /dev/cpuset/audio-app
     copy /dev/cpuset/cpus /dev/cpuset/audio-app/cpus
@@ -416,6 +421,11 @@ on property:sys.boot_completed=1
     # FPS info
     chown system graphics /sys/class/drm/card0/sde-crtc-0/measured_fps
     chmod 0666 /sys/class/drm/card0/sde-crtc-0/measured_fps
+
+    #Enable UFS auto_hibern8 back
+    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
+    #Enable UFS clock gating back
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
