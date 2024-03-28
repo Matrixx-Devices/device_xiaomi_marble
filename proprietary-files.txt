@@ -1,4 +1,4 @@
-# Device proprietary files - from MARBLEGlobal_OS1.0.2.0.UMRMIXM package, unless pinned
+# Device proprietary files - from MARBLEGlobal_OS1.0.3.0.UMRMIXM package, unless pinned
 
 # ACDB
 vendor/etc/acdbdata/Forte/Forte_acdb_cal.acdb
