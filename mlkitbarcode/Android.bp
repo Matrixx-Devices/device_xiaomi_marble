@@ -2,6 +2,7 @@ android_app_import {
 	name: "MlkitBarcodeUI",
 	owner: "google",
 	apk: "MlkitBarcodeUI.apk",
+        preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -20,6 +21,7 @@ android_app_import {
 	name: "VisionBarcode",
 	owner: "google",
 	apk: "VisionBarcode.apk",
+        preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
